@@ -1,7 +1,7 @@
-# pyQt_Git
+# pyQt_Git --- <python과 pyQt5 Designer 연습>
 
 
-python과 pyQt5 Designer 연습
+
 
 1. 계산기
 
