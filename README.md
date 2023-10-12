@@ -29,13 +29,41 @@ python과 pyQt5 Designer 연습
 
 <br>
 
-4. Dialog <br>
-    1.  text = self.lineEdit.text() 
+4. Dialog
+   1. 팝업창 다이얼로그 QMessageBox.question <br>
+
+    ```python
+    text = self.lineEdit.text() 
     text.isdigit()
-    retval = QMessageBox.question(self, 'QMessageBox - ?', 'Are you sure?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-    
-    2. 
-    3. 
-    4. 
-    5. 
-    6. 
+    retval = QMessageBox.question(self, 'QMessageBox - ?', 'Are you sure?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)  # ???
+    ```
+   2. 파일열기 QFileDialog.getOpenFileName
+   ```python
+   QFileDialog.getOpenFileName(self, 'ㅍㅇ ㅇㄱ', './')
+   if name[0]:  # [0] ???
+            with open(name[0], 'r') as file:  # 'r' ???
+                data = file.read()
+                self.textEdit.setText(data)
+   ```
+   3. 내장폰트 다이얼로그 QFontDialog.getFont
+   ```python
+   font, ok = QFontDialog.getFont()  # 내장 폰트를 보여주고 선택할 수 있다.
+   if ok and font:
+   ```
+   4. 내장컬러 다이얼로그 QColorDialog.getColor()
+    ```python
+    color = QColorDialog.getColor() # getColor() 사용시 OS 내장 컬러를 보여주고 선택할 수 있다.    
+        if color.isValid():
+    ```
+   5. 인풋 다이얼로그
+   ```python
+   text, ok = QInputDialog.getText(self, 'QInput - Name', 'What`s your name ?')
+   ```
+   6. 목록 다이얼로그 QInputDialog.getItem
+   ```python
+    items = ['봄', '여름', '가을', '겨울']
+    item, ok = QInputDialog.getItem(self, 'QInput - Season', 'Choose your favorite Season.', items, 0, False)  # 0과 False의 의미 확인하기 
+    if ok and item:
+        self.textEdit.append(item)
+   ```
+
