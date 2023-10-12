@@ -1,5 +1,7 @@
 # pyQt_Git
 
+---
+
 python과 pyQt5 Designer 연습
 
 1. 계산기
@@ -24,3 +26,7 @@ python과 pyQt5 Designer 연습
         2. ```  self.textEdit_2.setTextColor(color) ```또는 <br>
         &nbsp;``` self.textEdit_2.setFontPointSize(size) ## 색상을 입히거나 폰트를 변경하고  ```
         3. ```  self.textEdit_2.moveCursor(QTextCursor.End)  ## 선택 초기화 ```
+
+<br>
+
+4. Dialog <br>
