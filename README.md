@@ -30,3 +30,12 @@ python과 pyQt5 Designer 연습
 <br>
 
 4. Dialog <br>
+    1.  text = self.lineEdit.text() 
+    text.isdigit()
+    retval = QMessageBox.question(self, 'QMessageBox - ?', 'Are you sure?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
+    
+    2. 
+    3. 
+    4. 
+    5. 
+    6. 
