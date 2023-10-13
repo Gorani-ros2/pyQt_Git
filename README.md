@@ -59,7 +59,8 @@
     ```python
     text = self.lineEdit.text() 
     text.isdigit()
-    retval = QMessageBox.question(self, 'QMessageBox - ?', 'Are you sure?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)  # ???
+    retval = QMessageBox.question(self, 'QMessageBox - ?', \
+             'Are you sure?', QMessageBox.Yes | QMessageBox.No, QMessageBox.No)  # ???
     ```
    2. 파일열기 QFileDialog.getOpenFileName
    ```python
@@ -86,7 +87,8 @@
    6. 목록 다이얼로그 QInputDialog.getItem
    ```python
     items = ['봄', '여름', '가을', '겨울']
-    item, ok = QInputDialog.getItem(self, 'QInput - Season', 'Choose your favorite Season.', items, 0, False)  # 0과 False의 의미 확인하기 
+    item, ok = QInputDialog.getItem(self, 'QInput - Season', \
+               'Choose your favorite Season.', items, 0, False)  # 0과 False의 의미 확인하기 
     if ok and item:
         self.textEdit.append(item)
    ```
