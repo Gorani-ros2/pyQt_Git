@@ -1,4 +1,4 @@
-# pyQt_Git --- <python과 pyQt5 Designer 연습>
+# pyQt5 Designer 연습
 
 
 
@@ -93,3 +93,32 @@
         self.textEdit.append(item)
    ```
 
+
+<br>
+
+5. ComboBox, calendarWidget
+   1. ComboBox
+      1. 콤보박스 추가 addItem()
+      ```python
+      self.cbYear.addItem(str(year)) 
+      ```
+
+      2. 콤보박스 텍스트 지정 setCurrentText()
+      ```python
+      self.cbYear.setCurrentText(str(1990))
+      ```
+
+      3. 콤보박스 텍스트 가져오기 currentText()
+      ```python
+      self.cbYear.currentText()
+      ```
+
+   2. calendarWidget
+      1. 캘린더 선택 selectedDate() 
+      ```python
+      self.calendarWidget.selectedDate()
+      ```
+      2. 캘린더 텍스트 가져오기 toStirng()
+      ```python
+      date.toString('yyyy') # yyyy, M, d
+      ```
