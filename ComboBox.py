@@ -44,8 +44,6 @@ class WindowClass(QMainWindow, from_class):
         day = self.cbDay.currentText()
         self.lineEdit.setText(year+'-'+month.zfill(2)+'-'+day.zfill(2))
         
-        
-        
     
 if __name__ == "__main__": 
     app = QApplication(sys.argv)
