@@ -10,7 +10,7 @@ class WindowClass(QMainWindow, from_class):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.setWindowTitle(" Test Text ComboBox ")
+        self.setWindowTitle(" Test ComboBox ")
         
         self.pushButton.clicked.connect(self.seend)
             
