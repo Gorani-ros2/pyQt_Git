@@ -1,3 +1,4 @@
+import os
 import sys
 import mysql.connector
 import pandas as pd
@@ -59,10 +60,10 @@ class WindowClass(QMainWindow, from_class):
     def dbconnect(self,df):
         li = []
         amazon = mysql.connector.connect(
-            host = "<DB_HOST>",
+            host = os.environ["DB_HOST"],          # 접속 정보는 환경 변수로 (코드에 적지 않음)
             port = 3306,
-            user = "<DB_USER>",
-            password = "<DB_PASSWORD>",
+            user = os.environ["DB_USER"],
+            password = os.environ["DB_PASSWORD"],
             database = "amrbase"
         )
         cur = amazon.cursor(buffered = True)  # 읽어올 데이터 양이 많은 경우 buffered = True
